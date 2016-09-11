@@ -2,12 +2,17 @@ html, body {
   height: 100%;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: helvetica;
   font-weight: 100;
   font-size: 14px;
   margin: 0 auto;
-  background: #FFFFBB;
+  background: #F2F2F2;
 }
 
 .right {
@@ -47,7 +52,7 @@ ul {
 
 li {
   list-style: none;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(215, 215, 191, 0.3);
   background-image:
     linear-gradient(
       90deg,
@@ -108,3 +113,24 @@ li {
   box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
   outline: none;
 }
+
+.first {
+  color: #27636d;
+}
+
+.second {
+  color: #bb5538;
+}
+
+.third {
+ color: gray;
+}
+
+.four {
+ color: #000;
+}
+
+.five {
+ color: #357180;
+}
+

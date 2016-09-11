@@ -8,20 +8,24 @@
   <div id="notebooks" ng-app="notebooks" ng-controller="NotebookListCtrl">
     <input type="text" id="query" ng-model="query"/>
     <select ng-model="orderList">
-      <option value="name">By name</option>
-      <option value="-age">Newest</option>
-      <option value="age">Oldest</option>
+      <option value="chapterNo">Chapter Number</option>
+      <option value="romaji">Romaji A-Z</option>
+      <option value="-romaji">Romaji Z-A</option>
     </select>
     <ul id="notebook_ul">
-      <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
-        name: {{notebook.name}}<br/>
-        procesor: {{notebook.procesor}}<br/>
-        <div class="right top">{{notebook.age}}</div>
+      <li ng-repeat="vocal in vocals | filter:query">
+      <!-- <li ng-repeat="vocal in vocals | filter:query | orderBy: orderList"> -->
+        <p class="first">{{vocal.hiragana}}&nbsp;&nbsp;<label class="second">{{vocal.romaji}}</label></p>
+        <p class="third">{{vocal.kanji}}</p>
+        <p class="four">{{vocal.english}}</p>
+        <p class="five">{{vocal.myanmar}}</p>
+        <div class="right top">{{vocal.chapterNo}} / {{vocal.wordNo}}</div>
       </li>
     </ul>
-    <span>Number of notebooks: {{notebooks.length}}</span>
+    <span>Number of vocabulary: {{vocals.length}}</span>
   </div>
 
+  <!-- <script type="text/javascript" src="javascripts/jquery.min.js"></script> -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   <script type="text/javascript" src="javascripts/search.js"></script>
 </body>
