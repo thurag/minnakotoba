@@ -17,17 +17,16 @@
       <li ng-repeat="vocal in vocals | filter:query">
       <!-- <li ng-repeat="vocal in vocals | filter:query | orderBy: orderList"> -->
         <p class="first">{{vocal.hiragana}}&nbsp;&nbsp;<label class="second">{{vocal.romaji}}</label></p>
-        <p class="third">{{vocal.kanji}}</p>
+        <p class="third">{{vocal.kanji}}</p><label class="chap_no">{{vocal.chapterNo}} / {{vocal.wordNo}}</label>
         <p class="four">{{vocal.english}}</p>
         <p class="five myanmar3">{{vocal.myanmar}}</p>
-        <div class="right top">{{vocal.chapterNo}} / {{vocal.wordNo}}</div>
       </li>
     </ul>
     <span>Number of vocabulary: {{vocals.length}}</span>
   </div>
 
   <!-- <script type="text/javascript" src="javascripts/jquery.min.js"></script> -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
   <script type="text/javascript" src="javascripts/search.js"></script>
 </body>
 </html>

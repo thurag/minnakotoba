@@ -124,6 +124,7 @@ li {
 
 .third {
  color: gray;
+ max-width: 90%;
 }
 
 .four {
@@ -134,3 +135,6 @@ li {
  color: #357180;
 }
 
+.chap_no {
+  float: right;
+}

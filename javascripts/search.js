@@ -14,6 +14,7 @@ notebooks.controller('NotebookListCtrl', function($scope, $http) {
                 word.chapterNo = i + 1;
                 word.wordNo = ii + 1;
                 vocals.push(word);
+console.log(word);
              }
          }
 
