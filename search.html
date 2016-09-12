@@ -14,7 +14,7 @@
       <option value="-romaji">Romaji Z-A</option>
     </select>
     <ul id="notebook_ul">
-      <li ng-repeat="vocal in vocals | filter:query">
+      <li ng-repeat="vocal in vocals | filter:query track by vocal.id">
       <!-- <li ng-repeat="vocal in vocals | filter:query | orderBy: orderList"> -->
         <p class="first">{{vocal.hiragana}}&nbsp;&nbsp;<label class="second">{{vocal.romaji}}</label></p>
         <p class="third">{{vocal.kanji}}</p><label class="chap_no">{{vocal.chapterNo}} / {{vocal.wordNo}}</label>
